@@ -25,4 +25,23 @@
 <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- then our app's own js file -->
+
+
+<!-- Now everything we'll need to use firebase -->
+<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+
+<script type="text/javascript">
+  var apiKey = '<%= process.env.API_KEY %>';
+  //replace this with the config in the code snippet provided from Firebase.
+ var config = {
+    apiKey: apiKey,
+    authDomain: "my-first-heroku-project.firebaseapp.com",
+    databaseURL: "https://my-first-heroku-project.firebaseio.com",
+    projectId: "my-first-heroku-project",
+    storageBucket: "my-first-heroku-project.appspot.com",
+    messagingSenderId: "578024936962"
+  };
+  firebase.initializeApp(config);
+</script>
+
 <script src="/js/main.js"></script>
